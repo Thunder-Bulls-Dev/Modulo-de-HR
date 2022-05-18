@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% if latest_empleado_list %}
-    <ul>
-    {% for question in latest_empleado_list %}
-        <li><a href="/HR/{{ empleado.id }}/">{{ empleado.nombre }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No Empleados are available.</p>
-{% endif %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        {% if latest_empleado_list %}
+        <ul>{% for question in latest_empleado_list %}
+            <li><a href="/HR/{{ empleado.id }}/">{{ empleado.nombre }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No Empleados are available.</p>
+        {% endif %}
+    </body>
 </html>
